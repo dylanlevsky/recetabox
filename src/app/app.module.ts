@@ -13,6 +13,8 @@ import { BannerHeroComponent } from './components/banner-hero/banner-hero.compon
 import { FeedComponent } from './components/feed/feed.component';
 import { HomeFeedComponent } from './components/home-feed/home-feed.component';
 
+import { LoadingBarHttpClientModule } from '@ngx-loading-bar/http-client';
+import { LoadingBarRouterModule } from '@ngx-loading-bar/router';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { HomeFeedComponent } from './components/home-feed/home-feed.component';
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    LoadingBarHttpClientModule,
+    LoadingBarRouterModule
   ],
   providers: [AngularFirestore],
   bootstrap: [AppComponent]
