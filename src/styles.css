@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+@import "../node_modules/ng2-slim-loading-bar/style.css";
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,600,700,800|Roboto:400,500');
+
+*{
+    padding:0;
+    margin:0;
+    border:0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background-color: #EFF1F5;
+}

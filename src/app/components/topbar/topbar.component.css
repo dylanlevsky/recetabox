@@ -1,0 +1,40 @@
+#topbar{
+    width: 100%;
+    float: left;
+    height: 60px;
+    position: fixed;
+    z-index: 100;
+    top: 10px;
+}
+
+#logo{
+    width: 120px;
+    height: 48px;
+    position: absolute;
+    margin: auto;
+    left: 10%;
+    top: 0;
+    bottom: 0;
+}
+
+#menu-icon{
+    width: 16px;
+    height: 16px;
+    display: block;
+    position: absolute;
+    margin: auto;
+    right: 10%;
+    top: 0;
+    bottom: 0;
+}
+
+#menu-icon div{
+    height: 2px;
+    width: 16px;
+    background-color: #fff;
+    margin-bottom: 2px;
+}
+
+#menu-icon div:nth-child(3){
+    width: 10px;
+}
