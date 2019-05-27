@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument} from '@angular/fire/firestore';
+
 import { RecipeInterface } from './recipe-interface';
 import { Observable } from 'rxjs/internal/Observable';
 import { map } from 'rxjs/operators';
@@ -15,6 +16,7 @@ export class ApiDataService {
    }
   private recipeCollection: AngularFirestoreCollection<RecipeInterface>;
   private recipes: Observable<RecipeInterface[]>;
+  private recipe: Observable<RecipeInterface>;
 
   getAllRecipes() {
     return this.recipes = this.recipeCollection.snapshotChanges()
@@ -25,6 +27,11 @@ export class ApiDataService {
           return data;
         });
       }));
+  }
+
+   //Obtiene uno
+   public getRecipe(documentId: string) {
+    return this.afs.collection('recipes').doc(documentId).snapshotChanges()
   }
 
 }

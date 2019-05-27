@@ -1,30 +1,33 @@
-:host{
+:host {
     width: 80%;
     margin: 0 10%;
     float: left;
     margin-bottom: 50px;
 }
 
-.recipe{
+.recipe {
     width: 32%;
     margin-right: 2%;
     float: left;
     background-color: #fff;
     border-radius: 10px;
-
 }
 
-.recipe img{
+.recipe a {
+    text-decoration: none;
+}
+
+.recipe img {
     width: 100%;
     height: auto;
     display: block;
 }
 
-.recipe:nth-child(3){
+.recipe:nth-child(3) {
     margin: 0;
 }
 
-.recipe h3{
+.recipe h3 {
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
     color: #4FBC67;
@@ -32,11 +35,12 @@
     margin-bottom: 20px;
 }
 
-.recipe p{
+.recipe p {
     font-size: 0.9375em;
     opacity: 0.5;
+    color: #000;
 }
 
-.recipe-info{
+.recipe-info {
     padding: 20px 5%;
 }

@@ -11,10 +11,13 @@ import { AngularFirestore } from '@angular/fire/firestore';
 import { TopbarComponent } from './components/topbar/topbar.component';
 import { BannerHeroComponent } from './components/banner-hero/banner-hero.component';
 import { FeedComponent } from './components/feed/feed.component';
-import { HomeFeedComponent } from './components/home-feed/home-feed.component';
 
 import { LoadingBarHttpClientModule } from '@ngx-loading-bar/http-client';
 import { LoadingBarRouterModule } from '@ngx-loading-bar/router';
+import { RecipeComponent } from './components/recipe/recipe.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
+import { HomeComponent } from './components/home/home.component';
+import { SearchComponent } from './components/search/search.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,10 @@ import { LoadingBarRouterModule } from '@ngx-loading-bar/router';
     TopbarComponent,
     BannerHeroComponent,
     FeedComponent,
-    HomeFeedComponent
+    RecipeComponent,
+    NotFoundComponent,
+    HomeComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,

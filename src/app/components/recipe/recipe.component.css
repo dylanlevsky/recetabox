@@ -1,0 +1,110 @@
+#banner {
+    width: 100%;
+    height: 388px;
+    float: left;
+    position: relative;
+}
+
+#recipe-title {
+    overflow: hidden;
+    width: 100%;
+    z-index: 10;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h1 {
+    text-align: center;
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    font-size: 2.5em;
+    margin-bottom: 35px;
+}
+
+
+/* Recipe content */
+
+#recipe-container {
+    width: 100%;
+    float: left;
+}
+
+#recipe-content {
+    min-height: 500px;
+    position: relative;
+    z-index: 10;
+    top: -120px;
+    width: 60%;
+    margin: 0 auto;
+    background-color: #fff;
+    -webkit-box-shadow: 0px 6px 13px 0px rgba(0, 0, 0, 0.07);
+    box-shadow: 0px 6px 13px 0px rgba(0, 0, 0, 0.07);
+}
+
+
+/* Recipe nav */
+
+#recipe-nav {
+    margin-bottom: 30px;
+    width: 100%;
+    float: left;
+}
+
+#recipe-nav li {
+    width: 33.33%;
+    float: left;
+    list-style: none;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+#recipe-nav li:nth-child(2) {
+    border-right: 1px solid #E9EAEC;
+    border-left: 1px solid #E9EAEC;
+}
+
+.nav {
+    height: 93px;
+    border-bottom: 1px solid #E9EAEC;
+}
+
+.nav-selected {
+    height: 103px;
+    border: 0;
+    -webkit-box-shadow: 0px 6px 13px 0px rgba(0, 0, 0, 0.07);
+    box-shadow: 0px 6px 13px 0px rgba(0, 0, 0, 0.07);
+}
+
+.nav div svg {
+    fill: #BFBFBF;
+}
+
+.nav-selected div svg {
+    fill: #4FBC67;
+}
+
+.nav p {
+    color: #BFBFBF;
+}
+
+.nav-selected p {
+    color: #4FBC67;
+}
+
+.recipe-nav-icon {
+    width: 33px;
+    height: 33px;
+    margin: 15px auto 10px;
+}
+
+#recipe-nav li p {
+    text-transform: uppercase;
+    font-size: 0.8em;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+}
