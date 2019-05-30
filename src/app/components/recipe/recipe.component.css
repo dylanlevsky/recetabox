@@ -79,6 +79,45 @@ h1 {
     box-shadow: 0px 6px 13px 0px rgba(0, 0, 0, 0.07);
 }
 
+#nav-item-selected {
+    background-color: red;
+    height: 103px;
+    width: 33%;
+    position: absolute;
+    border: 0;
+    margin: 0 auto;
+    -webkit-box-shadow: 0px 6px 13px 0px rgba(0, 0, 0, 0.07);
+    box-shadow: 0px 6px 13px 0px rgba(0, 0, 0, 0.07);
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+.nav-item-left {
+    margin: 0 auto;
+    top: 0;
+    left: 0;
+    right: inherit;
+    bottom: 0;
+}
+
+.nav-item-right {
+    margin: 0 auto;
+    top: 0!important;
+    right: 0!important;
+    bottom: 0!important;
+}
+
+.nav-item-center {
+    margin: 0 auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
 .nav div svg {
     fill: #BFBFBF;
 }
