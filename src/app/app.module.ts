@@ -19,6 +19,12 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { HomeComponent } from './components/home/home.component';
 import { SearchComponent } from './components/search/search.component';
 
+
+//Angular material
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatIconModule} from '@angular/material';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +42,10 @@ import { SearchComponent } from './components/search/search.component';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     LoadingBarHttpClientModule,
-    LoadingBarRouterModule
+    LoadingBarRouterModule,
+    BrowserAnimationsModule,
+    MatTabsModule,
+    MatIconModule
   ],
   providers: [AngularFirestore],
   bootstrap: [AppComponent]

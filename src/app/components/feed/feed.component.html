@@ -3,8 +3,7 @@
         <img src={{recipe.img}}/>
         <div class="recipe-info">
             <h3>{{ recipe.title }}</h3>
-            <p>{{ recipe.desc }}</p>
-
+            <p>{{ recipe.desc | slice: 3:100 }}...</p>
         </div>
     </a>
 </div>

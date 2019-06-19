@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild,ViewEncapsulation  } from '@angular/core';
 import { ApiDataService } from '../../api-data.service';
 import { RecipeInterface } from '../../recipe-interface';
 import { Observable } from 'rxjs/internal/Observable';
@@ -8,7 +8,8 @@ import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 @Component({
   selector: 'app-recipe',
   templateUrl: './recipe.component.html',
-  styleUrls: ['./recipe.component.css']
+  styleUrls: ['./recipe.component.css'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class RecipeComponent implements OnInit {
 
@@ -51,39 +52,10 @@ export class RecipeComponent implements OnInit {
       this.recipeO = recipe.payload.data();
       this.title = this.recipeO.title;
       this.img = this.recipeO.img;
+      this.desc = this.recipeO.desc;
+      this.ingredients = this.recipeO.ingredients;
+      this.steps = this.recipeO.steps;
 
-      switch(s) { 
-        case "info": { 
-          this.content = this.recipeO.desc;
-          this.nav_info.nativeElement.className = 'nav-selected';
-          this.nav_ingredients.nativeElement.className = 'nav';
-          this.nav_steps.nativeElement.className = 'nav';
-           break; 
-        } 
-        case "ingredients": { 
-          this.content = this.recipeO.ingredients;
-          this.nav_info.nativeElement.className = 'nav';
-          this.nav_ingredients.nativeElement.className = 'nav-selected';
-          this.nav_steps.nativeElement.className = 'nav';
-           break; 
-        } 
-        case "steps": { 
-          this.content = this.recipeO.steps;
-          this.nav_info.nativeElement.className = 'nav';
-          this.nav_ingredients.nativeElement.className = 'nav';
-          this.nav_steps.nativeElement.className = 'nav-selected';
-           break; 
-        } 
-        default: { 
-          this.content = this.recipeO.desc;
-          /*
-          this.nav_info.nativeElement.className = 'nav-selected';
-          this.nav_ingredients.nativeElement.className = 'nav';
-          this.nav_steps.nativeElement.className = 'nav';
-          */
-           break; 
-        } 
-     }
      
     })
   }
