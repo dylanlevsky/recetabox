@@ -5,15 +5,19 @@ import { RecipeInterface } from './recipe-interface';
 import { Observable } from 'rxjs/internal/Observable';
 import { map } from 'rxjs/operators';
 
+
 @Injectable({
   providedIn: 'root'
 })
 export class ApiDataService {
 
+
   constructor(private afs: AngularFirestore) {
     this.recipeCollection = afs.collection<RecipeInterface>('recipes');
     this.recipes = this.recipeCollection.valueChanges();
    }
+
+  
   private recipeCollection: AngularFirestoreCollection<RecipeInterface>;
   private recipes: Observable<RecipeInterface[]>;
   private recipe: Observable<RecipeInterface>;
@@ -29,9 +33,19 @@ export class ApiDataService {
       }));
   }
 
-   //Obtiene uno
-   public getRecipe(documentId: string) {
+  // Carga de un receta especifica: Obtiene uno
+  public getRecipe(documentId: string) {
     return this.afs.collection('recipes').doc(documentId).snapshotChanges()
   }
+
+  // Read Recipe: with the field in the document 'permalink'
+  getByUserRef(userRef) {
+    return this.afs.collection('recipes', ref =>
+     ref.where('permalink', '==', userRef)
+     ).snapshotChanges();
+  }
+  
+
+
 
 }

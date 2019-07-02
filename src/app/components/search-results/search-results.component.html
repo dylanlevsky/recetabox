@@ -1,0 +1,37 @@
+<!--
+<div id="banner">
+    <app-banner-hero></app-banner-hero>
+</div>
+-->
+<!-- Instant Search Results -->
+<div>
+    <div id="search-input-container">
+        <input autocomplete="off" type="text" [(ngModel)]="searchterm" (keydown)="search($event)" id="search" placeholder="Descubre una receta">
+        <div id="instant-search-input" *ngIf="recipes?.length>=1">
+            <div *ngFor="let recipe of recipes" class="instant-search-recipe-item">
+                <a routerLink="/recipe/{{recipe.permalink}}/info">
+                    <p>{{ recipe.title | titlecase }}</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Search results -->
+<!--
+<div id="recipes-results-container">
+    <div *ngFor="let recipe of recipes" class="recipe">
+        <a routerLink="/recipe/{{recipe.permalink}}/info">
+            <img src={{recipe.img}}/>
+            <div class="recipe-info">
+                <h3>{{ recipe.title | titlecase }}</h3>
+                <p>{{ recipe.desc | slice: 3:100 }}...</p>
+            </div>
+        </a>
+    </div>
+
+    <div *ngIf="recipes?.length<1" id="recipes-results-error">
+        <p>Ingrese una busqueda por favor.</p>
+    </div>
+</div>
+-->

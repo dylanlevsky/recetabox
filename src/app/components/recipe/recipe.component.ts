@@ -40,7 +40,8 @@ export class RecipeComponent implements OnInit {
     this.route.paramMap.subscribe((params: ParamMap) => {
       this.idQuery = params.get('id');
       this.section = params.get('s');
-      this.loadRecipe(this.idQuery, this.section);
+      //this.loadRecipe(this.idQuery, this.section);
+      this.loadRecipeByRef(this.idQuery);
   })
 
   }
@@ -57,6 +58,18 @@ export class RecipeComponent implements OnInit {
       this.steps = this.recipeO.steps;
 
      
+    })
+  }
+
+  loadRecipeByRef(userRef){
+    this.apiData.getByUserRef(userRef).subscribe(recipe =>{
+      //console.log('RECIPE', recipe[0].payload.doc.data());
+      this.recipeO = recipe[0].payload.doc.data();
+      this.title = this.recipeO.title;
+      this.img = this.recipeO.img;
+      this.desc = this.recipeO.desc;
+      this.ingredients = this.recipeO.ingredients;
+      this.steps = this.recipeO.steps;
     })
   }
 
