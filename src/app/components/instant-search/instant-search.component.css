@@ -1,0 +1,48 @@
+#search-input-container {
+    width: 380px;
+    z-index: 100;
+    margin: 0 auto;
+    position: relative;
+}
+
+#search-input-container input {
+    width: 95%;
+    height: 40px;
+    padding: 3px 0;
+    font-size: 1em;
+    padding-left: 5%;
+}
+
+
+/* Instant search results */
+
+#instant-search-input {
+    width: 100%;
+    padding: 3px 0;
+    background-color: #fff;
+    overflow: hidden;
+    position: absolute;
+    top: 48px;
+    z-index: 100;
+}
+
+#instant-search-input a {
+    font-family: 'Raleway', sans-serif;
+    color: #4FBC67;
+    font-size: 1em;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+#instant-search-input a p {
+    margin-bottom: 20px;
+    padding: 15px 0;
+    padding-left: 16px;
+}
+
+.instant-search-recipe-item:hover {
+    background-color: #F7F7F7;
+}
+
+
+/* ------------------ */
