@@ -1,13 +1,13 @@
-#topbar{
+#topbar {
     width: 100%;
     float: left;
     height: 60px;
     position: fixed;
-    z-index: 100;
+    z-index: 90;
     top: 10px;
 }
 
-#logo{
+#logo {
     width: 120px;
     height: 48px;
     position: absolute;
@@ -17,24 +17,58 @@
     bottom: 0;
 }
 
-#menu-icon{
+#menu-icon {
     width: 16px;
     height: 16px;
     display: block;
     position: absolute;
     margin: auto;
     right: 10%;
-    top: 0;
-    bottom: 0;
+    top: 25px;
+    z-index: 100;
 }
 
-#menu-icon div{
+#menu-icon div {
     height: 2px;
     width: 16px;
-    background-color: #fff;
+    background-color: #f00;
     margin-bottom: 2px;
 }
 
-#menu-icon div:nth-child(3){
+#menu-icon div:nth-child(3) {
     width: 10px;
+}
+
+
+/* -- MENU -- */
+
+#menu {
+    width: 40%;
+    height: 100vh;
+    position: fixed;
+    right: -40%;
+    background-color: #fff;
+    z-index: 80;
+    text-align: center;
+}
+
+#menu h3 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    color: #37443A;
+    font-size: 1.5em;
+    margin-top: 70px;
+    margin-bottom: 50px;
+}
+
+#menu ul li {
+    margin-bottom: 30px;
+    list-style: none;
+}
+
+#menu ul li a {
+    color: #4FBC67;
+    text-decoration: none;
+    font-size: 1.3em;
+    font-weight: 99;
 }

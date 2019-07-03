@@ -33,18 +33,31 @@ export class ApiDataService {
       }));
   }
 
-  // Carga de un receta especifica: Obtiene uno
+  // Read Recipe: with the auto document ID
   public getRecipe(documentId: string) {
     return this.afs.collection('recipes').doc(documentId).snapshotChanges()
   }
 
-  // Read Recipe: with the field in the document 'permalink'
+  // Read Recipe: with the field (permalink) value in the document 
+  /*
   getByUserRef(userRef) {
     return this.afs.collection('recipes', ref =>
      ref.where('permalink', '==', userRef)
      ).snapshotChanges();
   }
+  */
   
+
+
+  // Read Document: where the field and value via parameters
+  getByUserRef(fieldRef, valueRef) {
+    return this.afs.collection('recipes', ref =>
+     ref.where(fieldRef, '==', valueRef)
+     ).snapshotChanges();
+  }
+  
+
+
 
 
 

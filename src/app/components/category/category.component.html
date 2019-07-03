@@ -1,0 +1,23 @@
+<div id="banner">
+    <div id="search-container">
+        <app-instant-search></app-instant-search>
+    </div>
+    <app-banner-hero></app-banner-hero>
+</div>
+
+
+<div id="recipes-results-container">
+    <div *ngFor="let recipe of recipeslist" class="recipe">
+        <a routerLink="/recipe/{{recipe.data.permalink}}/info">
+            <img src={{recipe.data.img}}/>
+            <div class="recipe-info">
+                <h3>{{ recipe.data.title | titlecase }}</h3>
+                <p>{{ recipe.data.desc | slice: 3:100 }}...</p>
+            </div>
+        </a>
+    </div>
+
+    <div *ngIf="recipeslist?.length<1" id="recipes-results-error">
+        <p>Seleccione una categoria por favor</p>
+    </div>
+</div>

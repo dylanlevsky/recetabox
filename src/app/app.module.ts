@@ -31,6 +31,7 @@ import { SearchResultsComponent } from './components/search-results/search-resul
 // Forms
 import { FormsModule } from '@angular/forms';
 import { InstantSearchComponent } from './components/instant-search/instant-search.component';
+import { CategoryComponent } from './components/category/category.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { InstantSearchComponent } from './components/instant-search/instant-sear
     HomeComponent,
     SearchComponent,
     SearchResultsComponent,
-    InstantSearchComponent
+    InstantSearchComponent,
+    CategoryComponent,
   ],
   imports: [
     BrowserModule,

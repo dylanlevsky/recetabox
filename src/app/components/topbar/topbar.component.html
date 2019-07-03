@@ -1,10 +1,23 @@
+<div id="menu-icon" (click)="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
 <div id="topbar">
-  <a routerLink="/">
-  <img src="assets/images/logo.svg" id="logo"/>
-  </a>
-  <div id="menu-icon">
-    <div></div>
-    <div></div>
-    <div></div>
-  </div>
+    <a routerLink="/">
+        <img src="assets/images/logo.svg" id="logo" />
+    </a>
+</div>
+
+
+<!-- MENU -->
+<div id="menu">
+    <h3>Explorar categorías</h3>
+    <ul>
+        <li><a routerLink="/category/faciles" (click)="toggleMenu()">Fáciles</a></li>
+        <li><a routerLink="/category/saludables" (click)="toggleMenu()">Saludables</a></li>
+        <li><a routerLink="/category/vegetarianas" (click)="toggleMenu()">Vegetarianas</a></li>
+        <li><a routerLink="/category/saladas" (click)="toggleMenu()">Saladas</a></li>
+        <li><a routerLink="/category/dulces" (click)="toggleMenu()">Dulces</a></li>
+    </ul>
 </div>

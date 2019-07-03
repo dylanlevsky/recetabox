@@ -47,6 +47,7 @@ export class RecipeComponent implements OnInit {
   }
 
 
+  /*
   loadRecipe(id: string, s: string){
     this.apiData.getRecipe(id).subscribe(recipe =>{
       //console.log('RECIPE', recipe.payload.data());
@@ -60,9 +61,10 @@ export class RecipeComponent implements OnInit {
      
     })
   }
+  */
 
-  loadRecipeByRef(userRef){
-    this.apiData.getByUserRef(userRef).subscribe(recipe =>{
+  loadRecipeByRef(valueRef){
+    this.apiData.getByUserRef('permalink', valueRef).subscribe(recipe =>{
       //console.log('RECIPE', recipe[0].payload.doc.data());
       this.recipeO = recipe[0].payload.doc.data();
       this.title = this.recipeO.title;
