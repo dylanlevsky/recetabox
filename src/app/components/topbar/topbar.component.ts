@@ -15,16 +15,17 @@ export class TopbarComponent implements OnInit {
   }
 
   toggleMenu(){
-    console.log("TOOGLE MENU");
     let menu: HTMLElement = document.getElementById('menu');
+    let menu_icon: HTMLElement = document.getElementById('menu-hamburger');
     if(!this.menuStatus){
       menu.setAttribute("style", "right:0");
+      menu_icon.classList.add('x');
       this.menuStatus = true;
     }else{
       menu.setAttribute("style", "right:-40%");
+      menu_icon.classList.remove('x');
       this.menuStatus = false;
     }
-    
   }
 
 }

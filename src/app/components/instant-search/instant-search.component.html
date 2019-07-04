@@ -1,11 +1,14 @@
 <div>
     <div id="search-input-container">
-        <input autocomplete="off" type="text" [(ngModel)]="searchterm" (keydown)="search($event)" id="search" placeholder="Descubre una receta">
+        <div id="search-input">
+            <div id="search-input-icon">
+                <mat-icon>search</mat-icon>
+            </div>
+            <input autocomplete="off" type="text" [(ngModel)]="searchterm" (keydown)="search($event)" id="search" placeholder="Descubre una receta">
+        </div>
         <div id="instant-search-input" *ngIf="recipes?.length>=1">
             <div *ngFor="let recipe of recipes" class="instant-search-recipe-item" (click)="onItemClick()">
-                <a routerLink="/recipe/{{recipe.permalink}}/info">
-                    <p>{{ recipe.title | titlecase }}</p>
-                </a>
+                <button routerLink="/recipe/{{recipe.permalink}}/info" mat-button>{{ recipe.title | titlecase }}</button>
             </div>
         </div>
     </div>

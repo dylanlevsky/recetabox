@@ -1,8 +1,7 @@
-<div id="menu-icon" (click)="toggleMenu()">
-    <div></div>
-    <div></div>
-    <div></div>
-</div>
+<button id="menu-hamburger" mat-icon-button (click)="toggleMenu()">
+        <mat-icon>menu</mat-icon>
+</button>
+
 <div id="topbar">
     <a routerLink="/">
         <img src="assets/images/logo.svg" id="logo" />
@@ -14,10 +13,10 @@
 <div id="menu">
     <h3>Explorar categorías</h3>
     <ul>
-        <li><a routerLink="/category/faciles" (click)="toggleMenu()">Fáciles</a></li>
-        <li><a routerLink="/category/saludables" (click)="toggleMenu()">Saludables</a></li>
-        <li><a routerLink="/category/vegetarianas" (click)="toggleMenu()">Vegetarianas</a></li>
-        <li><a routerLink="/category/saladas" (click)="toggleMenu()">Saladas</a></li>
-        <li><a routerLink="/category/dulces" (click)="toggleMenu()">Dulces</a></li>
+        <button routerLink="/category/faciles" (click)="toggleMenu()" mat-button>Faciles</button>
+        <button routerLink="/category/saludables" (click)="toggleMenu()" mat-button>Saludables</button>
+        <button routerLink="/category/vegetarianas" (click)="toggleMenu()" mat-button>Vegetarianas</button>
+        <button routerLink="/category/saladas" (click)="toggleMenu()" mat-button>Saladas</button>
+        <button routerLink="/category/dulces" (click)="toggleMenu()" mat-button>Dulces</button>
     </ul>
 </div>

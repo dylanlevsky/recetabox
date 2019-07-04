@@ -3,7 +3,7 @@
     float: left;
     height: 60px;
     position: fixed;
-    z-index: 90;
+    z-index: 100;
     top: 10px;
 }
 
@@ -17,26 +17,21 @@
     bottom: 0;
 }
 
-#menu-icon {
-    width: 16px;
-    height: 16px;
-    display: block;
+#menu-hamburger {
     position: absolute;
     margin: auto;
     right: 10%;
-    top: 25px;
-    z-index: 100;
+    top: 20px;
+    z-index: 150;
+    color: rgba(255, 255, 255, 1);
+    -webkit-transition: color 0.5s ease-in-out;
+    -moz-transition: color 0.5s ease-in-out;
+    -o-transition: color 0.5s ease-in-out;
+    transition: color 0.5s ease-in-out;
 }
 
-#menu-icon div {
-    height: 2px;
-    width: 16px;
-    background-color: #f00;
-    margin-bottom: 2px;
-}
-
-#menu-icon div:nth-child(3) {
-    width: 10px;
+#menu-hamburger.x {
+    color: rgba(0, 0, 0, 1);
 }
 
 
@@ -48,8 +43,15 @@
     position: fixed;
     right: -40%;
     background-color: #fff;
-    z-index: 80;
+    z-index: 120;
     text-align: center;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    -webkit-box-shadow: 0px 0px 15px 7px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 0px 15px 7px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 15px 7px rgba(0, 0, 0, 0.1);
 }
 
 #menu h3 {
@@ -57,18 +59,15 @@
     font-weight: 800;
     color: #37443A;
     font-size: 1.5em;
-    margin-top: 70px;
+    margin-top: 90px;
     margin-bottom: 50px;
 }
 
-#menu ul li {
-    margin-bottom: 30px;
-    list-style: none;
-}
-
-#menu ul li a {
+#menu ul button {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px 0;
     color: #4FBC67;
-    text-decoration: none;
     font-size: 1.3em;
     font-weight: 99;
 }

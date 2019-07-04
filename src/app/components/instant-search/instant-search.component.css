@@ -1,16 +1,41 @@
 #search-input-container {
-    width: 380px;
-    z-index: 100;
+    width: 506px;
+    z-index: 90;
     margin: 0 auto;
     position: relative;
 }
 
-#search-input-container input {
-    width: 95%;
+#search-input {
+    width: 100%;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    -webkit-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 90;
+    background-color: #fff;
+}
+
+#search-input-icon {
+    width: 10%;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#search-input input {
+    width: 85%;
     height: 40px;
-    padding: 3px 0;
+    padding: 3px 2.5%;
     font-size: 1em;
-    padding-left: 5%;
+    background-color: transparent;
 }
 
 
@@ -22,27 +47,28 @@
     background-color: #fff;
     overflow: hidden;
     position: absolute;
-    top: 48px;
-    z-index: 100;
+    top: 40px;
+    padding-top: 12px;
+    z-index: 89;
+    -webkit-border-bottom-right-radius: 8px;
+    -webkit-border-bottom-left-radius: 8px;
+    -moz-border-radius-bottomright: 8px;
+    -moz-border-radius-bottomleft: 8px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    -webkit-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.2);
 }
 
-#instant-search-input a {
+#instant-search-input button {
+    width: 100%;
+    text-align: left;
+    padding: 5px 0;
+    padding-left: 5%;
     font-family: 'Raleway', sans-serif;
     color: #4FBC67;
     font-size: 1em;
     text-decoration: none;
     font-weight: 400;
 }
-
-#instant-search-input a p {
-    margin-bottom: 20px;
-    padding: 15px 0;
-    padding-left: 16px;
-}
-
-.instant-search-recipe-item:hover {
-    background-color: #F7F7F7;
-}
-
-
-/* ------------------ */

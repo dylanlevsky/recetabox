@@ -7,7 +7,7 @@
 
 
 <div id="recipes-results-container">
-    <div *ngFor="let recipe of recipeslist" class="recipe">
+    <div *ngFor="let recipe of recipeslist" class="recipe" matRipple>
         <a routerLink="/recipe/{{recipe.data.permalink}}/info">
             <img src={{recipe.data.img}}/>
             <div class="recipe-info">
@@ -16,6 +16,7 @@
             </div>
         </a>
     </div>
+
 
     <div *ngIf="recipeslist?.length<1" id="recipes-results-error">
         <p>Seleccione una categoria por favor</p>

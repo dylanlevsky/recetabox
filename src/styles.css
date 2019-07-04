@@ -16,6 +16,11 @@ body {
     background-color: #EFF1F5;
 }
 
+textarea:focus,
+input:focus {
+    outline: none;
+}
+
 
 /* RECIPES GRID */
 
@@ -25,6 +30,8 @@ body {
     float: left;
     background-color: #fff;
     border-radius: 10px;
+    position: relative;
+    z-index: 1;
 }
 
 .recipe a {

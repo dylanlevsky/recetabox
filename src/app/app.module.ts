@@ -27,6 +27,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatIconModule} from '@angular/material';
 import { SearchResultsComponent } from './components/search-results/search-results.component';
+import {MatRippleModule} from '@angular/material/core';
+import {MatButtonModule} from '@angular/material/button';
 
 // Forms
 import { FormsModule } from '@angular/forms';
@@ -57,7 +59,9 @@ import { CategoryComponent } from './components/category/category.component';
     BrowserAnimationsModule,
     MatTabsModule,
     MatIconModule,
-    FormsModule
+    FormsModule,
+    MatRippleModule,
+    MatButtonModule
   ],
   providers: [AngularFirestore],
   bootstrap: [AppComponent]
