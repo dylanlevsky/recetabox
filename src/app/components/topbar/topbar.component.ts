@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, Event, NavigationStart } from '@angular/router';
 
 @Component({
   selector: 'app-topbar',
@@ -9,9 +10,19 @@ export class TopbarComponent implements OnInit {
 
   menuStatus : Boolean = false;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+    let search_container: HTMLElement = document.getElementById('search-container');
+    this.router.events.subscribe( (e) => {
+      if (e instanceof NavigationStart) {
+        if (e.url === "/") {
+            search_container.setAttribute("style", "top:50%");
+        } else {
+            search_container.setAttribute("style", "top:0");
+        }
+      }
+    })
   }
 
   toggleMenu(){

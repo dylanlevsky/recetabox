@@ -1,21 +1,16 @@
-#topbar {
-    width: 100%;
-    float: left;
-    height: 60px;
-    position: fixed;
-    z-index: 100;
-    top: 10px;
-}
+/* LOGO */
 
 #logo {
     width: 120px;
     height: 48px;
-    position: absolute;
-    margin: auto;
+    position: fixed;
     left: 10%;
-    top: 0;
-    bottom: 0;
+    top: 18px;
+    z-index: 100;
 }
+
+
+/* MENU HAMBURGER */
 
 #menu-hamburger {
     position: absolute;
@@ -32,6 +27,59 @@
 
 #menu-hamburger.x {
     color: rgba(0, 0, 0, 1);
+}
+
+
+/* --- SEARCH --- */
+
+#banner {
+    width: 100%;
+    height: 388px;
+    float: left;
+    position: relative;
+}
+
+#home-feed {
+    text-align: center;
+    float: left;
+    width: 100%;
+}
+
+#home-feed h2 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    color: #37443A;
+    font-size: 1.875em;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+#home-feed p {
+    font-size: 1.125em;
+    opacity: 0.45;
+    margin-bottom: 30px;
+}
+
+#search-container {
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+#search-container h1 {
+    text-align: center;
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    font-size: 2.5em;
+    margin-bottom: 35px;
 }
 
 

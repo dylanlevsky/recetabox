@@ -1,13 +1,23 @@
-<button id="menu-hamburger" mat-icon-button (click)="toggleMenu()">
-        <mat-icon>menu</mat-icon>
-</button>
-
-<div id="topbar">
+<!-- LOGO -->
+<div id="logo">
     <a routerLink="/">
-        <img src="assets/images/logo.svg" id="logo" />
+        <img src="assets/images/logo.svg" />
     </a>
 </div>
 
+<!--  SEARCH -->
+<div id="banner">
+    <div id="search-container">
+        <h1>¿Qué querés cocinar hoy?</h1>
+        <app-instant-search></app-instant-search>
+    </div>
+    <app-banner-hero></app-banner-hero>
+</div>
+
+<!--  MENU HAMBURGER -->
+<button id="menu-hamburger" mat-icon-button (click)="toggleMenu()">
+        <mat-icon>menu</mat-icon>
+</button>
 
 <!-- MENU -->
 <div id="menu">
