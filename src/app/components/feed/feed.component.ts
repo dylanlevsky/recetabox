@@ -15,7 +15,7 @@ export class FeedComponent implements OnInit {
 
   ngOnInit() {
     this.apiData.getAllRecipes().subscribe(recipes =>{
-      console.log('RECIPES', recipes);
+      //console.log('RECIPES', recipes);
       this.recipesO = recipes;
     })
   }

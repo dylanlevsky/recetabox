@@ -1,11 +1,6 @@
-<!--
-<div id="banner">
-    <div id="search-container">
-        <app-instant-search></app-instant-search>
-    </div>
-    <app-banner-hero></app-banner-hero>
+<div id="recipe-title">
+    <h1>{{ catname | titlecase }}</h1>
 </div>
--->
 
 <div id="recipes-results-container">
     <div *ngFor="let recipe of recipeslist" class="recipe" matRipple>
@@ -20,6 +15,6 @@
 
 
     <div *ngIf="recipeslist?.length<1" id="recipes-results-error">
-        <p>Seleccione una categoria por favor</p>
+        <p>No hay recetas disponibles</p>
     </div>
 </div>
