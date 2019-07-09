@@ -30,12 +30,15 @@
     justify-content: center;
 }
 
-#search-input input {
+#search-input form {
     width: 85%;
+    background-color: transparent;
+}
+
+#search-input form input {
     height: 40px;
     padding: 3px 2.5%;
     font-size: 1em;
-    background-color: transparent;
 }
 
 

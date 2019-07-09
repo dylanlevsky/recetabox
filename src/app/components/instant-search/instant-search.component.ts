@@ -4,6 +4,9 @@ import { AngularFirestore } from '@angular/fire/firestore';
 import { Subject } from 'rxjs/Subject';
 import { Observable } from 'Rxjs/Rx';
 
+import { Router } from '@angular/router';
+import {NgForm} from '@angular/forms';
+
 @Component({
   selector: 'app-instant-search',
   templateUrl: './instant-search.component.html',
@@ -11,7 +14,7 @@ import { Observable } from 'Rxjs/Rx';
 })
 export class InstantSearchComponent implements OnInit {
 
-  searchterm: string;
+  searchterm: string; // ngModel del input
 
   startAt = new Subject();
   endAt = new Subject();
@@ -21,9 +24,7 @@ export class InstantSearchComponent implements OnInit {
 
   recipes;
 
-  public data: Observable<any[]>;
-
-  constructor(private afs: AngularFirestore) { }
+  constructor(private afs: AngularFirestore,private router: Router) { }
 
   ngOnInit() {
     Observable.combineLatest(this.startObs, this.endObs).subscribe((value) => {
@@ -49,5 +50,9 @@ export class InstantSearchComponent implements OnInit {
     this.searchterm = "";
     this.recipes = "";
   }
+
+  submitSearch() {
+    this.router.navigateByUrl('/search/' + this.searchterm);
+  } 
 
 }

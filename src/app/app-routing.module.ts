@@ -17,7 +17,7 @@ const routes: Routes = [
         data: { title: 'Recipe'}
   },
   {
-    path: 'search',
+    path: 'search/:s',
     component: SearchResultsComponent,
     data: { title: 'Search Results'}
   },

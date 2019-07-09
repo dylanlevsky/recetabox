@@ -16,7 +16,6 @@ import { FeedComponent } from './components/feed/feed.component';
 import { RecipeComponent } from './components/recipe/recipe.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { HomeComponent } from './components/home/home.component';
-import { SearchComponent } from './components/search/search.component';
 
 // Http & Router
 import { LoadingBarHttpClientModule } from '@ngx-loading-bar/http-client';
@@ -35,6 +34,7 @@ import { FormsModule } from '@angular/forms';
 import { InstantSearchComponent } from './components/instant-search/instant-search.component';
 import { CategoryComponent } from './components/category/category.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,7 +44,6 @@ import { CategoryComponent } from './components/category/category.component';
     RecipeComponent,
     NotFoundComponent,
     HomeComponent,
-    SearchComponent,
     SearchResultsComponent,
     InstantSearchComponent,
     CategoryComponent,

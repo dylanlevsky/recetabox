@@ -14,12 +14,6 @@ import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 })
 export class CategoryComponent implements OnInit {
 
-  private recipeO: RecipeInterface;
-  private title: string;
-  private desc: string;
-  private img: string;
-  recipes;
-
   public recipeslist = [];
 
   catname : string; // catname from the url
@@ -40,9 +34,7 @@ export class CategoryComponent implements OnInit {
         });
       })
     });
-  })
-
-      
+  }) 
   }
 
   firequery(valueRef) {

@@ -55,8 +55,13 @@ export class ApiDataService {
      ref.where(fieldRef, '==', valueRef)
      ).snapshotChanges();
   }
-  
 
+  // Search Document
+  searchByTitle(valueRef) {
+    return this.afs.collection('recipes', ref =>
+    ref.limit(4).orderBy('title').startAt(valueRef).endAt(valueRef+"\uf8ff"))
+    .snapshotChanges();
+  };
 
 
 
