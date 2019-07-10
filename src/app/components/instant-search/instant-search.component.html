@@ -6,7 +6,7 @@
                 <mat-icon>search</mat-icon>
             </div>
             <form (ngSubmit)="submitSearch()">
-                <input name="query" autocomplete="off" type="text" [(ngModel)]="searchterm" (keydown)="search($event)" id="search" placeholder="Descubre una receta">
+                <input name="query" autocomplete="off" type="text" [(ngModel)]="searchterm" (keydown)="search($event)" id="search" placeholder="Descubre una receta" (focus)="onFocus()" (focusout)="onFocusOut()">
             </form>
         </div>
 
