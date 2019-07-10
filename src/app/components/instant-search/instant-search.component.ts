@@ -24,9 +24,14 @@ export class InstantSearchComponent implements OnInit {
 
   recipes;
 
+  
+  
+  
+
   constructor(private afs: AngularFirestore,private router: Router) { }
 
   ngOnInit() {
+    
     Observable.combineLatest(this.startObs, this.endObs).subscribe((value) => {
       this.firequery(value[0], value[1]).subscribe((recipes) => {
       this.recipes = recipes;
@@ -54,5 +59,6 @@ export class InstantSearchComponent implements OnInit {
   submitSearch() {
     this.router.navigateByUrl('/search/' + this.searchterm);
   } 
+
 
 }
