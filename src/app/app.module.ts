@@ -18,8 +18,8 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { HomeComponent } from './components/home/home.component';
 
 // Http & Router
-import { LoadingBarHttpClientModule } from '@ngx-loading-bar/http-client';
-import { LoadingBarRouterModule } from '@ngx-loading-bar/router';
+//import { LoadingBarHttpClientModule } from '@ngx-loading-bar/http-client';
+//import { LoadingBarRouterModule } from '@ngx-loading-bar/router';
 
 //Angular material
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -54,8 +54,6 @@ import { CategoryComponent } from './components/category/category.component';
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
-    LoadingBarHttpClientModule,
-    LoadingBarRouterModule,
     BrowserAnimationsModule,
     MatTabsModule,
     MatIconModule,
