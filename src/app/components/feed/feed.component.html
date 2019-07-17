@@ -1,4 +1,4 @@
-<div *ngFor="let recipe of recipesO" class="recipe" matRipple>
+<div *ngFor="let recipe of recipesList" class="recipe" matRipple>
     <a routerLink="/recipe/{{recipe.permalink}}/info">
         <img src={{recipe.img}}/>
         <div class="recipe-info">

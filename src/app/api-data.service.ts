@@ -22,6 +22,7 @@ export class ApiDataService {
   private recipes: Observable<RecipeInterface[]>;
   private recipe: Observable<RecipeInterface>;
 
+  /*
   getAllRecipes() {
     return this.recipes = this.recipeCollection.snapshotChanges()
       .pipe(map(changes => {
@@ -31,23 +32,21 @@ export class ApiDataService {
           return data;
         });
       }));
+      
+  }
+  */
+
+  // Get Last Recipes: limited in 6 posts
+  getLastRecipes(){
+    return this.afs.collection<RecipeInterface>('recipes', ref =>
+     ref.limit(6)
+     ).snapshotChanges();
   }
 
   // Read Recipe: with the auto document ID
   public getRecipe(documentId: string) {
     return this.afs.collection('recipes').doc(documentId).snapshotChanges()
   }
-
-  // Read Recipe: with the field (permalink) value in the document 
-  /*
-  getByUserRef(userRef) {
-    return this.afs.collection('recipes', ref =>
-     ref.where('permalink', '==', userRef)
-     ).snapshotChanges();
-  }
-  */
-  
-
 
   // Read Document: where the field and value via parameters
   getByUserRef(fieldRef, valueRef) {
@@ -56,7 +55,7 @@ export class ApiDataService {
      ).snapshotChanges();
   }
 
-  // Search Document
+  // Search Document: by the title value
   searchByTitle(valueRef) {
     return this.afs.collection('recipes', ref =>
     ref.limit(4).orderBy('title').startAt(valueRef).endAt(valueRef+"\uf8ff"))

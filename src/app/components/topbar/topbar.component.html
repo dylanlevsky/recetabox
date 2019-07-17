@@ -21,6 +21,10 @@
 
 <!-- MENU -->
 <div id="menu">
+    <div id="menu-mobile-search-container">
+        <app-instant-search (eventEmitter)="onEventEmitter()"></app-instant-search>
+    </div>
+
     <h3>Explorar categorías</h3>
     <ul>
         <button routerLink="/category/faciles" (click)="toggleMenu()" mat-button>Faciles</button>

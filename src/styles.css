@@ -25,8 +25,8 @@ input:focus {
 /* RECIPES GRID */
 
 .recipe {
-    width: 32%;
-    margin-right: 2%;
+    width: 100%;
+    margin-bottom: 20px;
     float: left;
     background-color: #fff;
     border-radius: 10px;
@@ -42,10 +42,6 @@ input:focus {
     width: 100%;
     height: auto;
     display: block;
-}
-
-.recipe:nth-child(3) {
-    margin: 0;
 }
 
 .recipe h3 {
@@ -64,4 +60,45 @@ input:focus {
 
 .recipe-info {
     padding: 20px 5%;
+}
+
+
+/* 600px */
+
+@media only screen and (min-width: 37.5em) {
+    .recipe {
+        width: 49%;
+        margin-right: 2%;
+    }
+    .recipe-info {
+        min-height: 145px;
+    }
+    .recipe:nth-child(2n) {
+        margin-right: 0;
+    }
+}
+
+
+/* 800px */
+
+@media only screen and (min-width: 50em) {
+    .recipe-info {
+        min-height: 100px;
+    }
+}
+
+
+/* 1080px */
+
+@media only screen and (min-width: 67.5em) {
+    .recipe {
+        width: 32%;
+        margin-right: 2%;
+    }
+    .recipe:nth-child(2n) {
+        margin-right: 2%;
+    }
+    .recipe:nth-child(3n) {
+        margin: 0;
+    }
 }

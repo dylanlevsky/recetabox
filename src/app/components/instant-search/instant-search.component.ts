@@ -9,12 +9,18 @@ import { Router } from '@angular/router';
 
 import {NgForm} from '@angular/forms';
 
+
+import { Output, EventEmitter } from '@angular/core';
+
 @Component({
   selector: 'app-instant-search',
   templateUrl: './instant-search.component.html',
   styleUrls: ['./instant-search.component.css']
 })
 export class InstantSearchComponent implements OnInit {
+
+  // Call parent method from child
+  @Output() eventEmitter: EventEmitter<MouseEvent> = new EventEmitter<MouseEvent>();
 
   searchterm: string; // ngModel del input
 
@@ -53,12 +59,10 @@ export class InstantSearchComponent implements OnInit {
   }
 
   onFocus(){
-    console.log("MANDALE MECHAAA");
     this.toggleInstantSearch(true);
   }
 
   onFocusOut(){
-    console.log("QUE LINDO FEO SOS");
     this.toggleInstantSearch(false);
   }
 
@@ -92,6 +96,7 @@ export class InstantSearchComponent implements OnInit {
 
   submitSearch() {
     this.router.navigateByUrl('/search/' + this.searchterm); 
+    this.eventEmitter.emit(); // Llamo al evento del parent component
   } 
 
 

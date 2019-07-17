@@ -3,10 +3,14 @@
 #logo {
     width: 120px;
     height: 48px;
-    position: fixed;
+    position: absolute;
     left: 10%;
     top: 18px;
     z-index: 100;
+}
+
+.search-input-mobile {
+    display: none;
 }
 
 
@@ -27,6 +31,7 @@
 
 #menu-hamburger.x {
     color: rgba(0, 0, 0, 1);
+    position: fixed;
 }
 
 
@@ -34,7 +39,7 @@
 
 #banner {
     width: 100%;
-    height: 388px;
+    height: 330px;
     float: left;
     position: relative;
 }
@@ -71,6 +76,7 @@
     -moz-transition: all 0.5s ease-in-out;
     -o-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
+    max-width: 506px;
 }
 
 #search-container h1 {
@@ -78,7 +84,7 @@
     color: #fff;
     font-family: 'Raleway', sans-serif;
     font-weight: 800;
-    font-size: 2.5em;
+    font-size: 1.7em;
     margin-bottom: 35px;
 }
 
@@ -86,10 +92,10 @@
 /* -- MENU -- */
 
 #menu {
-    width: 40%;
+    width: 100%;
     height: 100vh;
     position: fixed;
-    right: -40%;
+    right: -100%;
     background-color: #fff;
     z-index: 120;
     text-align: center;
@@ -100,6 +106,7 @@
     -webkit-box-shadow: 0px 0px 15px 7px rgba(0, 0, 0, 0.1);
     -moz-box-shadow: 0px 0px 15px 7px rgba(0, 0, 0, 0.1);
     box-shadow: 0px 0px 15px 7px rgba(0, 0, 0, 0.1);
+    overflow: scroll;
 }
 
 #menu h3 {
@@ -118,4 +125,53 @@
     color: #4FBC67;
     font-size: 1.3em;
     font-weight: 99;
+}
+
+#menu-mobile-search-container {
+    margin-top: 80px;
+    margin-bottom: 30px;
+}
+
+
+/* 530px */
+
+@media only screen and (min-width: 33.125em) {
+    #search-container h1 {
+        text-align: center;
+        color: #fff;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 800;
+        font-size: 2.5em;
+        margin-bottom: 35px;
+    }
+}
+
+
+/* 600px */
+
+@media only screen and (min-width: 37.5em) {
+    #banner {
+        height: 388px;
+    }
+}
+
+
+/* 900px */
+
+@media only screen and (min-width: 56.25em) {
+    #menu {
+        width: 40%;
+    }
+}
+
+
+/* 1060px */
+
+@media only screen and (min-width: 66.25em) {
+    .search-input-mobile {
+        display: inherit;
+    }
+    #menu-mobile-search-container {
+        display: none;
+    }
 }

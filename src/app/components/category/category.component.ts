@@ -16,6 +16,8 @@ export class CategoryComponent implements OnInit {
 
   public recipeslist = [];
 
+  //public recipesList = [];
+
   catname : string; // catname from the url
 
   constructor(private apiData: ApiDataService, 
@@ -23,8 +25,10 @@ export class CategoryComponent implements OnInit {
     private router: Router) { }
 
   ngOnInit() {
+    
     this.route.paramMap.subscribe((params: ParamMap) => {
     this.catname = params.get('cat');
+
     this.firequery(this.catname).subscribe((catsSnapshot) => {
       this.recipeslist = [];
       catsSnapshot.forEach((catData: any) => {
@@ -34,8 +38,23 @@ export class CategoryComponent implements OnInit {
         });
       })
     });
-  }) 
+  });
+  
+
+  /*
+  this.route.paramMap.subscribe((params: ParamMap) => {
+  this.catname = params.get('cat');
+
+  this.apiData.getByUserRef('cat', this.catname).subscribe(recipes =>{
+    recipes.forEach((catData: any) => {
+      this.recipesList.push(catData.payload.doc.data());
+    })
+  })
+  });
+  */
+
   }
+  
 
   firequery(valueRef) {
     return this.apiData.getByUserRef('cat', valueRef);

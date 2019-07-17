@@ -18,8 +18,10 @@ export class TopbarComponent implements OnInit {
       if (e instanceof NavigationStart) {
         if (e.url === "/") {
             search_container.setAttribute("style", "top:50%");
+            search_container.classList.remove('search-input-mobile');
         } else {
             search_container.setAttribute("style", "top:0");
+            search_container.classList.add('search-input-mobile');
         }
       }
     })
@@ -33,10 +35,23 @@ export class TopbarComponent implements OnInit {
       menu_icon.classList.add('x');
       this.menuStatus = true;
     }else{
-      menu.setAttribute("style", "right:-40%");
+      menu.setAttribute("style", "right:-100%");
       menu_icon.classList.remove('x');
       this.menuStatus = false;
     }
   }
+
+  closeMenu(){
+    let menu: HTMLElement = document.getElementById('menu');
+    let menu_icon: HTMLElement = document.getElementById('menu-hamburger');
+    menu.setAttribute("style", "right:-100%");
+    menu_icon.classList.remove('x');
+    this.menuStatus = false;
+  }
+
+  /* EventEmitter que se llama desde el child: Instant Search */
+  public onEventEmitter(): void {
+   this.closeMenu();
+ }
 
 }
