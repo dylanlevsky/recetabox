@@ -18,12 +18,12 @@ export class RecipeComponent implements OnInit {
     private router: Router) { }
 
 
-  private recipeO: RecipeInterface;
-  private title: string;
-  private desc: string;
-  private img: string;
-  private ingredients: string;
-  private steps: string;
+  recipeO: RecipeInterface;
+  title: string;
+  desc: string;
+  img: string;
+  ingredients: string;
+  steps: string;
 
   idQuery : string;
   section : string;
