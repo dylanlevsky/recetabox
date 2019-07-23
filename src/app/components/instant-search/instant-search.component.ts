@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Subject } from 'rxjs/Subject';
-import { Observable } from 'Rxjs/Rx';
+//import { Observable } from 'Rxjs/Rx';
+import { Observable } from 'rxjs/Rx';
 
 import { Router } from '@angular/router';
 
