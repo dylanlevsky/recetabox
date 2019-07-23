@@ -1,4 +1,5 @@
 //Install express server
+/*
 const express = require('express');
 const path = require('path');
 
@@ -17,3 +18,22 @@ app.get('*', function(req, res) {
 app.listen(process.env.PORT || 3000, function() {
     console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
 });
+*/
+const express = require('express');
+const app = express();
+const path = require('path');
+
+app.use(express.static(__dirname + '/dist/recetabox'));
+app.listen(process.env.PORT || 8080);
+
+//PATH LOCATION STARTEGY
+
+app.get('/*', function(req, res) {
+    const fullPath = path.join(__dirname + '/dist/recetabox/index.html');
+    console.log(" Fetching from.." + fullPath);
+    res.sendFile(fullPath);
+})
+
+console.log('Server started running..');
+
+//Changed to run on Heroku
