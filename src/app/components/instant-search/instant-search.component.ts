@@ -85,7 +85,7 @@ export class InstantSearchComponent implements OnInit {
 
   firequery(start, end) {
     return this.afs.collection('recipes', ref =>
-    ref.limit(4).orderBy('title').startAt(start).endAt(end))
+    ref.limit(3).orderBy('title').startAt(start).endAt(end))
     .valueChanges();
   };
 

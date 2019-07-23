@@ -34,8 +34,6 @@ import { FormsModule } from '@angular/forms';
 import { InstantSearchComponent } from './components/instant-search/instant-search.component';
 import { CategoryComponent } from './components/category/category.component';
 
-// Others
-
 @NgModule({
   declarations: [
     AppComponent,

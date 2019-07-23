@@ -1,6 +1,7 @@
 <div *ngFor="let recipe of recipesList" class="recipe" matRipple>
     <a routerLink="/recipe/{{recipe.permalink}}/info">
         <img src={{recipe.img}}/>
+
         <div class="recipe-info">
             <h3>{{ recipe.title | titlecase }}</h3>
             <p>{{ recipe.desc | slice: 3:90 }}...</p>
